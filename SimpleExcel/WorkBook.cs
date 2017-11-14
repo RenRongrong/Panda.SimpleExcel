@@ -145,6 +145,15 @@ namespace SimpleExcel
             return style;
         }
 
+        public byte[] ToBytes()
+        {
+            var stream = new MemoryStream();
+            hworkbook.Write(stream);
+            var result = stream.ToArray();
+            stream.Close();
+            return result;
+        }
+
         internal ICellStyle NewCellStyle(string styleName)
         {
             var style = hworkbook.CreateCellStyle();
