@@ -1,0 +1,12 @@
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\ExcelHelper.xml
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\ExcelHelper.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\ExcelHelper.pdb
+D:\projects\ExportToExcel\ExcelHelper\obj\Release\ExcelHelper.dll
+D:\projects\ExportToExcel\ExcelHelper\obj\Release\ExcelHelper.pdb
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\NPOI.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\NPOI.OOXML.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\NPOI.OpenXml4Net.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\NPOI.OpenXmlFormats.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Release\NPOI.xml
+D:\projects\ExportToExcel\ExcelHelper\obj\Release\ExcelHelper.csprojResolveAssemblyReference.cache

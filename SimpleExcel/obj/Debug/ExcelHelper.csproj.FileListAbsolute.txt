@@ -1,0 +1,10 @@
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\ExcelHelper.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\ExcelHelper.pdb
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\NPOI.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\NPOI.OOXML.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\NPOI.OpenXml4Net.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\projects\ExportToExcel\ExcelHelper\bin\Debug\NPOI.xml
+D:\projects\ExportToExcel\ExcelHelper\obj\Debug\ExcelHelper.dll
+D:\projects\ExportToExcel\ExcelHelper\obj\Debug\ExcelHelper.pdb

@@ -1,0 +1,767 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleExcel</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleExcel.Attributes.RowAttribute">
+            <summary>
+            将类的每一个实例作为Excel中的一行
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.IsStrict">
+            <summary>
+            是否执行严格转化，若为True，则将实例添加至行时只会显示含有Column特性的属性
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderFontFamily">
+            <summary>
+            表头字体
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderFontSize">
+            <summary>
+            表头字号
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderFontColor">
+            <summary>
+            表头字体颜色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderBackColor">
+            <summary>
+            表头背景色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderHeight">
+            <summary>
+            表头行高
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.Height">
+            <summary>
+            表头以外的行高
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderHorAlign">
+            <summary>
+            表头单元格水平对齐方式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.HeaderVerAlign">
+            <summary>
+            表头单元格垂直对齐方式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.OddRowColor">
+            <summary>
+            奇数行背景色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.RowAttribute.EvenRowColor">
+            <summary>
+            偶数行背景色
+            </summary>
+        </member>
+        <member name="T:SimpleExcel.Attributes.ColumnAttribute">
+            <summary>
+            将属性作为Excel的列
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.Name">
+            <summary>
+            显示在Excel中的表头名称
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.Style">
+            <summary>
+            整列的样式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.Font">
+            <summary>
+            整列的字体
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.FontFamily">
+            <summary>
+            字体
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.FontSize">
+            <summary>
+            字号
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.FontColor">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.Width">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.BackColor">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.HorAlign">
+            <summary>
+            单元格水平对齐方式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Attributes.ColumnAttribute.VerAlign">
+            <summary>
+            单元格垂直对齐方式
+            </summary>
+        </member>
+        <member name="T:SimpleExcel.Cell">
+            <summary>
+            Excel单元格
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Cell.Value">
+            <summary>
+            单元格的内容
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.Cell.#ctor(NPOI.SS.UserModel.ICell)">
+            <summary>
+            生成单元格
+            </summary>
+            <param name="cell">实现NPOI中的ICell接口的单元格实例</param>
+        </member>
+        <member name="M:SimpleExcel.Cell.SetStyle(NPOI.SS.UserModel.ICellStyle)">
+            <summary>
+            设置单元格格式
+            </summary>
+            <param name="style">格式</param>
+        </member>
+        <member name="T:SimpleExcel.CellCollection">
+            <summary>
+            Excel单元格集合
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.CellCollection.Item(System.Int32)">
+            <summary>
+            获取指定单元格
+            </summary>
+            <param name="index">以0开始的单元格索引</param>
+            <returns></returns>
+        </member>
+        <member name="P:SimpleExcel.CellCollection.LastCellNum">
+            <summary>
+            最后一个单元格的编号（以1开始）
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.CellCollection.#ctor(NPOI.SS.UserModel.IRow)">
+            <summary>
+            生成单元格集合
+            </summary>
+            <param name="row">实现NPOI中的IRow接口的行实例</param>
+        </member>
+        <member name="T:SimpleExcel.RowCollection">
+            <summary>
+            Excel工作表中的行集合
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.RowCollection.Item(System.Int32)">
+            <summary>
+            获取指定行的单元格集合
+            </summary>
+            <param name="index">以0开始的行索引</param>
+            <returns></returns>
+        </member>
+        <member name="P:SimpleExcel.RowCollection.LastRowNum">
+            <summary>
+            最后一行的编号（从1开始）
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.RowCollection.#ctor(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            生成行集合
+            </summary>
+            <param name="sheet">实现NPOI中的ISheet接口的工作表实例</param>
+        </member>
+        <member name="T:SimpleExcel.Sheet">
+            <summary>
+            Excel工作表
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Sheet.Name">
+            <summary>
+            工作表的名称
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Sheet.Rows">
+            <summary>
+            工作表的行集合
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.Sheet.#ctor(NPOI.SS.UserModel.ISheet,SimpleExcel.WorkBook)">
+            <summary>
+            生成工作表
+            </summary>
+            <param name="sheet">实现NPOI的ISheet接口的工作表实例</param>
+            <param name="workbook">工作表所在的工作簿</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.SetHeader``1(System.Int32)">
+            <summary>
+            在指定行添加表头
+            </summary>
+            <typeparam name="T">数据的类型</typeparam>
+            <param name="rowIndex">以0开始的行号</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.SetHeader(System.Int32,System.Type)">
+            <summary>
+            在指定行添加表头
+            </summary>
+            <param name="rowIndex">以0开始的行号</param>
+            <param name="type">数据的类型</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.AddRow``1(System.Int32,``0,SimpleExcel.Styles.Style)">
+            <summary>
+            在指定行添加数据
+            </summary>
+            <typeparam name="T">数据的类型</typeparam>
+            <param name="rowIndex">以0开始的行号</param>
+            <param name="subject">要添加的数据实例</param>
+            <param name="rowStyle">行格式</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.ConvertFromDataTable(System.Data.DataTable)">
+            <summary>
+            从DataTable转换成Sheet
+            </summary>
+            <param name="table">要转换的DataTable</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.ConvertFromQuery``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            从IQueryable转换成工作表
+            </summary>
+            <typeparam name="T">数据的类型</typeparam>
+            <param name="query">查询语句</param>
+            <param name="rowIndex">作为表头的行号，默认为0</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.ConvertFromQuery``1(System.Linq.IQueryable{``0},System.Int32)">
+            <summary>
+            从IQueryable转换成工作表
+            </summary>
+            <typeparam name="T">数据的类型</typeparam>
+            <param name="query">查询语句</param>
+            <param name="rowIndex">作为表头的行号，默认为0</param>
+        </member>
+        <member name="M:SimpleExcel.Sheet.TryParse(System.Data.DataTable,SimpleExcel.Sheet)">
+            <summary>
+            尝试将DataTable转换成Excel工作表
+            </summary>
+            <param name="table">要转换成工作表的DataTable</param>
+            <param name="sheet">目标工作表</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleExcel.Sheet.IsStrict(System.Type)">
+            <summary>
+            根据类型的Row特性指示是否执行严格的显示控制
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:SimpleExcel.Styles.HorizontalAlign">
+            <summary>
+            单元格水平对齐方式
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.General">
+            <summary>
+            常规
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Left">
+            <summary>
+            靠左
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Center">
+            <summary>
+            居中
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Right">
+            <summary>
+            靠右
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Fill">
+            <summary>
+            填充
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Justify">
+            <summary>
+            两端对齐
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.CenterSelection">
+            <summary>
+            跨列居中
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.HorizontalAlign.Distributed">
+            <summary>
+            分散对齐
+            </summary>
+        </member>
+        <member name="T:SimpleExcel.Styles.VerticalAlign">
+            <summary>
+            单元格垂直对齐方式
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.Top">
+            <summary>
+            靠上
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.Center">
+            <summary>
+            居中
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.Bottom">
+            <summary>
+            靠下
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.Justify">
+            <summary>
+            两端对齐
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.VerticalAlign.Distributed">
+            <summary>
+            分散对齐
+            </summary>
+        </member>
+        <member name="T:SimpleExcel.Styles.ExcelColor">
+            <summary>
+            Excel中的颜色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Aqua">
+            <summary>
+            水色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Automatic">
+            <summary>
+            自动
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Black">
+            <summary>
+            黑色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Blue">
+            <summary>
+            蓝色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.BlueGrey">
+            <summary>
+            蓝灰色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.BrightGreen">
+            <summary>
+            鲜绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Brown">
+            <summary>
+            褐色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Coral">
+            <summary>
+            珊瑚红
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.CornflowerBule">
+            <summary>
+            菊兰色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.DarkBlue">
+            <summary>
+            暗蓝色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.DarkGreen">
+            <summary>
+            暗绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.DarkRed">
+            <summary>
+            暗红色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.DarkTeal">
+            <summary>
+            深水绿
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.DarkYellow">
+            <summary>
+            暗黄色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Gold">
+            <summary>
+            金色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Green">
+            <summary>
+            绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Grey25Percent">
+            <summary>
+            25%灰
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Grey40Percent">
+            <summary>
+            40%灰
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Grey50Percent">
+            <summary>
+            50%灰
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Grey80Percent">
+            <summary>
+            80%灰
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Indigo">
+            <summary>
+            靛青色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Lavender">
+            <summary>
+            淡紫色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LemonChiffon">
+            <summary>
+            柠檬绸色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightBlue">
+            <summary>
+            亮蓝色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightCornflowerBlue">
+            <summary>
+            亮菊兰色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightGreen">
+            <summary>
+            亮绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightOrange">
+            <summary>
+            亮橙色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightTurquoise">
+            <summary>
+            亮青绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.LightYellow">
+            <summary>
+            亮黄色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Lime">
+            <summary>
+            酸橙色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Maroon">
+            <summary>
+            栗色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.OliveGreen">
+            <summary>
+            橄榄绿
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Orange">
+            <summary>
+            橙色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Orchid">
+            <summary>
+            淡紫色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.PaleBlue">
+            <summary>
+            苍蓝色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Pink">
+            <summary>
+            粉红色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Plum">
+            <summary>
+            洋李色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Red">
+            <summary>
+            红色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Rose">
+            <summary>
+            玫瑰红
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.RoyalBlue">
+            <summary>
+            皇家蓝
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.SeaGreen">
+            <summary>
+            海绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.SkyBlue">
+            <summary>
+            天蓝色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Tan">
+            <summary>
+            茶色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Teal">
+            <summary>
+            水鸭绿
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Turquoise">
+            <summary>
+            青绿色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Violet">
+            <summary>
+            紫罗兰
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.White">
+            <summary>
+            白色
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.Styles.ExcelColor.Yellow">
+            <summary>
+            黄色
+            </summary>
+        </member>
+        <member name="T:SimpleExcel.Styles.Font">
+            <summary>
+            字体
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Font.Name">
+            <summary>
+            在字典表中的键值名称
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Font.Family">
+            <summary>
+            字体名称
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Font.Size">
+            <summary>
+            字体大小
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Font.Color">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.Styles.Font.#ctor(System.String)">
+            <summary>
+            生成字体的实例
+            </summary>
+            <param name="name">字体在字典表中的键值名称</param>
+        </member>
+        <member name="T:SimpleExcel.Styles.Style">
+            <summary>
+            单元格样式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.WorkBook">
+            <summary>
+            单元格所在的工作簿
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.Font">
+            <summary>
+            字体
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.Name">
+            <summary>
+            样式名称
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.HorAlign">
+            <summary>
+            水平对齐方式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.VerAlign">
+            <summary>
+            垂直对齐方式
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.BackColor">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.Width">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:SimpleExcel.Styles.Style.Height">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.Styles.Style.Merge(System.String,SimpleExcel.Styles.Style[])">
+            <summary>
+            将多个样式合并为一个，并返回合并后的样式
+            </summary>
+            <param name="newStyleName">新样式的名称</param>
+            <param name="styles">要合并的样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleExcel.Styles.Style.#ctor(System.String,SimpleExcel.WorkBook)">
+            <summary>
+            生成单元格样式实例
+            </summary>
+            <param name="styleName">样式名称</param>
+            <param name="workbook">样式所在的工作簿</param>
+        </member>
+        <member name="T:SimpleExcel.WorkBook">
+            <summary>
+            Excel工作簿
+            </summary>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.#ctor(System.String)">
+            <summary>
+            从指定的路径读取excel文件
+            </summary>
+            <param name="path">要读取的excel文件的路径</param>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.#ctor(System.Data.DataSet,SimpleExcel.ExcelVersion)">
+            <summary>
+            从DataSet生成工作簿
+            </summary>
+            <param name="ds">源数据集</param>
+            <param name="version">Excel的版本</param>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.#ctor(SimpleExcel.ExcelVersion)">
+            <summary>
+            新建一个Excel工作簿
+            </summary>
+            <param name="version">Excel的版本</param>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.Save(System.String)">
+            <summary>
+            将工作簿保存到指定位置，如文件已存在，则覆盖原文件
+            </summary>
+            <param name="path">要保存的文件路径，包括完整的文件名</param>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.NewSheet(System.String)">
+            <summary>
+            返回新建立的工作表
+            </summary>
+            <param name="sheetName">工作表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.GetSheet(System.Int32)">
+            <summary>
+            根据索引获取工作表
+            </summary>
+            <param name="index">以0开始的工作表索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.GetSheet(System.String)">
+            <summary>
+            根据名称获取工作表
+            </summary>
+            <param name="sheetName">工作表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleExcel.WorkBook.NewStyle(System.String)">
+            <summary>
+            创建新样式
+            </summary>
+            <param name="styleName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SimpleExcel.ExcelVersion">
+            <summary>
+            Excel的版本
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.ExcelVersion.V2003">
+            <summary>
+            2003版
+            </summary>
+        </member>
+        <member name="F:SimpleExcel.ExcelVersion.V2007">
+            <summary>
+            2007版
+            </summary>
+        </member>
+    </members>
+</doc>
