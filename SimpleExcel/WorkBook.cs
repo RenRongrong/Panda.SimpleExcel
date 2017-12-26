@@ -145,6 +145,10 @@ namespace SimpleExcel
             return style;
         }
 
+        /// <summary>
+        /// 将工作簿转换成二进制数据
+        /// </summary>
+        /// <returns></returns>
         public byte[] ToBytes()
         {
             var stream = new MemoryStream();

@@ -9,3 +9,15 @@ F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.xml
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.csproj.CoreCompileInputs.cache
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.dll
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.pdb
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\SimpleExcel.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\SimpleExcel.pdb
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.OOXML.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.OpenXml4Net.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\bin\Debug\NPOI.xml
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.csprojResolveAssemblyReference.cache
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.csproj.CoreCompileInputs.cache
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.dll
+D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.pdb
