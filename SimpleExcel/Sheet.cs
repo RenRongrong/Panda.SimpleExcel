@@ -74,7 +74,7 @@ namespace SimpleExcel
                 string columnName = this.GetColumnName(attr);
                 var cell = this.Rows[rowIndex][columnIndex];
                 cell.Value = columnName == null ? info.Name : columnName;
-                Style columnStyle = attr.Style;
+                Style columnStyle = attr == null ? null : attr.Style;
                 if (columnStyle != null)
                 {
                     columnStyle.WorkBook = _workbook;
@@ -148,7 +148,7 @@ namespace SimpleExcel
                 var propertyValue = info.GetValue(subject, null);
                 Cell cell = this.Rows[rowIndex][columnIndex];
                 cell.Value = propertyValue == null ? "" : propertyValue.ToString();
-                var columnStyle = columnAttr.Style;
+                var columnStyle = columnAttr == null ? null : columnAttr.Style;
                 if (columnStyle != null)
                 {
                     columnStyle.WorkBook = _workbook;
