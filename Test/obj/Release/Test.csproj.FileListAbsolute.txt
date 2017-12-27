@@ -1,0 +1,15 @@
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\Test.exe
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\Test.pdb
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\SimpleExcel.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\NPOI.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\NPOI.OOXML.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\NPOI.OpenXmlFormats.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\NPOI.OpenXml4Net.dll
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\SimpleExcel.pdb
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\SimpleExcel.xml
+F:\projects\Repos\Panda.SimpleExcel\Test\bin\Release\NPOI.xml
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Release\Test.csproj.CoreCompileInputs.cache
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Release\Test.exe
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Release\Test.pdb

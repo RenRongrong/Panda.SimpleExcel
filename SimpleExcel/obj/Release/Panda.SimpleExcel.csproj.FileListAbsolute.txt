@@ -10,3 +10,4 @@ F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\bin\Release\NPOI.xml
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Release\Panda.SimpleExcel.csproj.CoreCompileInputs.cache
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Release\SimpleExcel.dll
 F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Release\SimpleExcel.pdb
+F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Release\Panda.SimpleExcel.csprojResolveAssemblyReference.cache
