@@ -22,7 +22,7 @@ namespace SimpleExcel.Attributes
         /// <summary>
         /// 整列的字体
         /// </summary>
-        public Font Font { get; set; }
+        internal Font Font { get; set; }
 
         /// <summary>
         /// 字体

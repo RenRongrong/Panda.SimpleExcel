@@ -21,3 +21,4 @@ D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.cspro
 D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.csproj.CoreCompileInputs.cache
 D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.dll
 D:\projects\Repo\Panda.SimpleExcel\SimpleExcel\obj\Debug\SimpleExcel.pdb
+F:\projects\Repos\Panda.SimpleExcel\SimpleExcel\obj\Debug\Panda.SimpleExcel.csprojResolveAssemblyReference.cache

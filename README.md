@@ -1,5 +1,12 @@
 # Panda.SimpleExcel
-简便操作excel的类库，包括读取、创建、修改等，支持直接从linq语句转换成excel工作表
+简便操作excel的类库，包括读取、创建、修改等，支持直接从DataSet、IEnumerable<T>以及linq语句转换成excel工作表，并支持通过特性控制工作表样式。
+
+## **Hello World**
+
+    var workbook = new WorkBook();
+    var sheet = workbook.NewSheet("Hello");
+    sheet.Rows[0][0].Value = "Hello World";
+    workbook.Save(@"F:\test.xls");
 
 ## **如何使用**
 ---
@@ -10,9 +17,20 @@
     var workbook = new WorkBook();
     var sheet = workbook.NewSheet("sheet1");
 
+> 读取工作簿和工作表：
+
+    // 根据路径读取工作簿
+    var workbook = var workbook = new WorkBook(@"F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\test.xlsx");
+    
+    // 根据索引读取工作表
+    var sheet1 = workbook.GetSheet(0);
+
+    // 根据名称读取工作表
+    var sheet2 = workbook.GetSheet("Sheet2");
+
 > 直接给单元格赋值：（单元格用`Sheet.Rows[rowIndex][columnIndex]`获取，并使用Value属性获取或修改它的内容）
 
-    sheet.Rows[0][0].Value = "Hello";
+    sheet1.Rows[0][0].Value = "Hello";
 
 > Sheet类提供了直接从IEnumerable<T>转换数据的功能。默认情况下，它会将类型T的所有字段名作为表头，将集合中的所有对象排列出来。例如，我们先创建一个类：
 
@@ -36,16 +54,48 @@
         };
         list.Add(person);
     }
-    //将List对象添加到工作表中
-    sheet.ConvertFromQuery(list, 1);
+    //将List对象添加到工作表中，第一个参数是集合对象，第二个参数是起始行数，默认为0
+    sheet1.ConvertFromQuery(list, 1);
 
 > 同样，也可以直接使用linq语句将查询结果添加到工作表
 
     //将linq语句转换成工作表数据
     var p = from a in list where a.Sex == "男" select a;
-    sheet.ConvertFromQuery(p, 12);
+    sheet2.ConvertFromQuery(p);
 
 > 保存工作簿：
 
     workbook.Save(@"D:\projects\test.xls");
+
+> 样式控制：可以通过特性来控制工作表的样式。使用Row特性可以控制行样式，使用Column特性可以控制列样式。
+
+    [Row(
+        EvenRowColor = ExcelColor.Aqua,
+        OddRowColor = ExcelColor.CornflowerBule,
+        HeaderBackColor = ExcelColor.Maroon,
+        HeaderFontColor = ExcelColor.White,
+        HeaderHeight = 20,
+        HeaderHorAlign = HorizontalAlign.Center,
+        HeaderVerAlign = VerticalAlign.Center)]
+    public class Person
+    {
+        [Column(
+            BackColor = ExcelColor.Brown, 
+            FontColor = ExcelColor.White, 
+            FontSize = 14,
+            FontFamily = "黑体",
+            HorAlign = HorizontalAlign.Center,
+            VerAlign = VerticalAlign.Center,
+            Name = "姓名")]
+        public string Name { get; set; }
+
+        [Column(
+            FontColor = ExcelColor.Red,
+            HorAlign = HorizontalAlign.Left,
+            VerAlign = VerticalAlign.Center,
+            Name = "性别")]
+        public string Sex { get; set; }
+
+        public int Age { get; set; }
+    }
 
