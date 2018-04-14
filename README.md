@@ -38,7 +38,8 @@
     {
         public string Name { get; set; }
         public string Sex { get; set; }
-        public int Age { get; set; }
+
+public int Age { get; set; }
     }
 
 > 然后使用`Sheet.ConvertFromQuey<T>`将集合直接添加到工作表中
@@ -99,3 +100,6 @@
         public int Age { get; set; }
     }
 
+效果图：
+
+![Excel效果图](https://github.com/RenRongrong/Panda.SimpleExcel/blob/master/SimpleExcel.PNG)
