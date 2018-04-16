@@ -10,7 +10,8 @@
 
 ## **如何使用**
 ---
-首先引入命名空间 `using SimpleExcel;`。这个命名空间下主要有两个类：`WorkBook`和`Sheet`。`WorkBook`用于对整个excel文件的操作，如创建、打开、保存，`Sheet`用于对工作表的操作，如在特定单元格中添加、修改数据，从数据源中批量导入等。可以参考以下的代码示例：
+- 使用nuget搜索Panda.SimpleExcel并安装。
+- 引入命名空间 `using SimpleExcel;`。这个命名空间下主要有两个类：`WorkBook`和`Sheet`。`WorkBook`用于对整个excel文件的操作，如创建、打开、保存，`Sheet`用于对工作表的操作，如在特定单元格中添加、修改数据，从数据源中批量导入等。可以参考以下的代码示例：
 
 > 新建工作簿和工作表：
 
@@ -38,11 +39,10 @@
     {
         public string Name { get; set; }
         public string Sex { get; set; }
-
-public int Age { get; set; }
+        public int Age { get; set; }
     }
 
-> 然后使用`Sheet.ConvertFromQuey<T>`将集合直接添加到工作表中
+> 然后使用`Sheet.ConvertFromQuery<T>`将集合直接添加到工作表中
 
     var list = new List<Person>();
     for(int i = 0; i < 10; i++)
@@ -102,4 +102,4 @@ public int Age { get; set; }
 
 效果图：
 
-![Excel效果图](https://github.com/RenRongrong/Panda.SimpleExcel/blob/master/SimpleExcel.PNG)
+![Excel效果图](https://gitee.com/pandarrr/Panda.SimpleExcel/blob/master/SimpleExcel.PNG)
