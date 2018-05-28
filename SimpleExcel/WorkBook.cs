@@ -5,13 +5,14 @@ using SimpleExcel.Styles;
 using System.Collections.Generic;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
+using System;
 
 namespace SimpleExcel
 {
     /// <summary>
     /// Excel工作簿
     /// </summary>
-    public class WorkBook
+    public class WorkBook: IDisposable
     {
         private IWorkbook hworkbook;
         private Dictionary<string, ICellStyle> customerStyles;
@@ -278,6 +279,12 @@ namespace SimpleExcel
             {
                 return NewFont(font);
             }
+        }
+
+        public void Dispose()
+        {
+            hworkbook.Close();
+            hworkbook = null;
         }
     }
 
