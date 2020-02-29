@@ -29,7 +29,7 @@ namespace SimpleExcel
         }
 
         /// <summary>
-        /// 最后一行的编号（从1开始）
+        /// 最后一行的编号（从0开始）
         /// </summary>
         public int LastRowNum
         {

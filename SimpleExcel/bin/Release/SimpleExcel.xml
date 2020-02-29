@@ -178,7 +178,7 @@
         </member>
         <member name="P:SimpleExcel.RowCollection.LastRowNum">
             <summary>
-            最后一行的编号（从1开始）
+            最后一行的编号（从0开始）
             </summary>
         </member>
         <member name="M:SimpleExcel.RowCollection.#ctor(NPOI.SS.UserModel.ISheet)">

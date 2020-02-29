@@ -22,7 +22,7 @@ F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\NPOI.OpenXmlFormats.dll
 F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\NPOI.OpenXml4Net.dll
 F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\SimpleExcel.pdb
 F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\NPOI.xml
-F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.exe
 F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.pdb
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.csprojAssemblyReference.cache
+F:\projects\Repos\Panda.SimpleExcel\Test\obj\Debug\Test.csproj.CopyComplete

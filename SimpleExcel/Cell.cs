@@ -14,9 +14,13 @@ namespace SimpleExcel
         /// </summary>
         public string Value
         {
-            get { return hcell.StringCellValue; }
+            get {
+                hcell.SetCellType(CellType.String);
+                return hcell.StringCellValue; 
+            }
             set { hcell.SetCellValue(value); }
         }
+
         /// <summary>
         /// 生成单元格
         /// </summary>

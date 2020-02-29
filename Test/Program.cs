@@ -12,9 +12,41 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //var workbook = new WorkBook(ExcelVersion.V2007);
+            ReadWorkbook();
+            Console.Read();
+        }
+
+        static void ReadWorkbook()
+        {
             var workbook = new WorkBook(@"F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\test.xlsx");
-            var sheet1 = workbook.GetSheet(0);
+            var sheet = workbook.GetSheet(0);
+            var table = new List<List<string>>();
+            for(var i = 0; i<= sheet.Rows.LastRowNum; i++)
+            {
+                var row = sheet.Rows[i];
+                var list = new List<string>();
+                for(var j = 0; j < row.LastCellNum; j++)
+                {
+                    list.Add(row[j].Value);
+                }
+                table.Add(list);
+            }
+            foreach(var list in table)
+            {
+                foreach(var str in list)
+                {
+                    Console.Write(str + "   ");
+                }
+                Console.Write("\r\n");
+                Console.WriteLine("----------------------------------");
+            }
+        }
+
+        static void CreateWorkbook(int index)
+        {
+            var workbook = new WorkBook(ExcelVersion.V2007);
+            //var workbook = new WorkBook(@"F:\projects\Repos\Panda.SimpleExcel\Test\bin\Debug\test.xlsx");
+            var sheet1 = workbook.NewSheet("hello");
             var sheet2 = workbook.NewSheet("所有人");
             var sheet3 = workbook.NewSheet("男性");
 
@@ -22,7 +54,7 @@ namespace Test
             sheet1.Rows[0][0].Value = "Hello";
 
             var list = new List<Person>();
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 var person = new Person()
                 {
@@ -39,9 +71,8 @@ namespace Test
             var p = from a in list where a.Sex == "男" select a;
             sheet3.ConvertFromQuery(p);
 
-            string path = Environment.CurrentDirectory + @"\test.xlsx";
+            string path = Environment.CurrentDirectory + $@"\test{index}.xlsx";
             workbook.Save(path);
-
         }
     }
 
